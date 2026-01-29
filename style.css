@@ -259,3 +259,45 @@ body{
   justify-content: center;
   cursor: pointer;
 }
+:root{
+  --bg:#e9ecf4;
+  --card:#ffffff;
+  --text:#111;
+  --muted:#6b7280;
+  --input:#f0f0f0;
+  --border:#d1d5db;
+}
+
+html[data-theme="dark"]{
+  --bg:#0b1220;
+  --card:#0f172a;
+  --text:#e5e7eb;
+  --muted:#a1a1aa;
+  --input:#111827;
+  --border:#273244;
+}
+
+body{ background: var(--bg); }
+.container{ background: var(--card); }
+.right-panel{ color: var(--text); }
+.forgot, .or, .msg{ color: var(--muted); }
+.input-box input{ background: var(--input); color: var(--text); }
+.socials div{ border-color: var(--border); }
+
+/* دکمه دارک مود */
+.theme-toggle{
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index: 9999;
+}
