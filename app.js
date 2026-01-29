@@ -121,10 +121,31 @@ function initDashboard() {
   });
 }
 
+// ---- Theme (Dark/Light) ----
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+
+  const btn = document.getElementById("themeToggle");
+  if (btn) btn.textContent = theme === "dark" ? "☀️" : "🌙";
+}
+
+function initTheme() {
+  const saved = localStorage.getItem("theme") || "light";
+  applyTheme(saved);
+
+  const btn = document.getElementById("themeToggle");
+  btn?.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "light";
+    applyTheme(current === "dark" ? "light" : "dark");
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initRegister();
   initLogin();
   initDashboard();
+  initTheme();        // ✅ اینو اضافه کردیم
 });
 // ---- Theme (Dark/Light) ----
 function applyTheme(theme) {
