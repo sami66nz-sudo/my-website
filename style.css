@@ -74,9 +74,9 @@ body {
   margin: 0 0 26px;
 }
 
-.input-box {
-  position: relative;
-  margin-bottom: 16px;
+.input-box input{
+  background: var(--input);
+  color: var(--text);
 }
 
 .input-box input {
