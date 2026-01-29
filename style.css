@@ -16,8 +16,8 @@ body {
 
 /* کارت اصلی */
 .container {
-  width: min(980px, 100%);    /* روی موبایل 100% */
-  background: #fff;
+  width: min(980px, 100%);
+  background: var(--card);
   border-radius: 22px;
   display: flex;
   overflow: hidden;
