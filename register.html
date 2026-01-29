@@ -17,47 +17,47 @@
     <a href="index.html" class="outline-btn">Login</a>
   </div>
 
-  <!-- Right Panel -->
   <div class="right-panel">
-    <h2>Register</h2>
+  <h2>Register</h2>
 
+  <form id="registerForm">
     <div class="input-box">
-      <input type="text" placeholder="Full Name">
+      <input id="fullName" type="text" placeholder="Full Name" autocomplete="name">
       <i class="fa fa-id-card"></i>
     </div>
 
     <div class="input-box">
-      <input type="text" placeholder="Username">
+      <input id="regUsername" type="text" placeholder="Username" autocomplete="username">
       <i class="fa fa-user"></i>
     </div>
 
     <div class="input-box">
-      <input type="email" placeholder="Email">
+      <input id="email" type="email" placeholder="Email" autocomplete="email">
       <i class="fa fa-envelope"></i>
     </div>
 
     <div class="input-box">
-      <input type="password" placeholder="Password">
+      <input id="regPassword" type="password" placeholder="Password" autocomplete="new-password">
       <i class="fa fa-lock"></i>
     </div>
 
     <div class="input-box">
-      <input type="password" placeholder="Confirm Password">
+      <input id="confirmPassword" type="password" placeholder="Confirm Password" autocomplete="new-password">
       <i class="fa fa-lock"></i>
     </div>
 
-    <button class="main-btn">Create Account</button>
+    <button class="main-btn" type="submit">Create Account</button>
+    <p id="regMsg" class="msg"></p>
+  </form>
 
-    <p class="or">or sign up with social platforms</p>
+  <p class="or">or sign up with social platforms</p>
 
-    <div class="socials">
-      <div><i class="fab fa-google"></i></div>
-      <div><i class="fab fa-facebook-f"></i></div>
-      <div><i class="fab fa-github"></i></div>
-      <div><i class="fab fa-linkedin-in"></i></div>
-    </div>
+  <div class="socials">
+    <div><i class="fab fa-google"></i></div>
+    <div><i class="fab fa-facebook-f"></i></div>
+    <div><i class="fab fa-github"></i></div>
+    <div><i class="fab fa-linkedin-in"></i></div>
   </div>
 </div>
 
-</body>
-</html>
+<script src="app.js"></script>
