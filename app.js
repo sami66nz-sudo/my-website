@@ -126,3 +126,25 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogin();
   initDashboard();
 });
+// ---- Theme (Dark/Light) ----
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  const btn = document.getElementById("themeToggle");
+  if (btn) btn.innerHTML = theme === "dark" ? "<span>☀️</span>" : "<span>🌙</span>";
+}
+
+function initTheme() {
+  const saved = localStorage.getItem("theme") || "light";
+  applyTheme(saved);
+
+  const btn = document.getElementById("themeToggle");
+  btn?.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "light";
+    applyTheme(current === "dark" ? "light" : "dark");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
+});
